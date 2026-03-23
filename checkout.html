@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement crypto - Élevage Canin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>🐕 Élevage Canin</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="catalog.html">Nos chiots</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="checkout-section">
+        <h2>Finaliser votre réservation</h2>
+        
+        <div class="checkout-container">
+            <div class="puppy-summary">
+                <h3>Récapitulatif</h3>
+                <img id="summary-image" src="" style="width:100%; border-radius:15px; margin-bottom:1rem;">
+                <p><strong>Nom :</strong> <span id="summary-name"></span></p>
+                <p><strong>Race :</strong> <span id="summary-breed"></span></p>
+                <p><strong>Prix :</strong> <span id="summary-price"></span></p>
+                <hr>
+                <p><strong>Montant en BTC :</strong> <span id="crypto-amount"></span></p>
+            </div>
+            
+            <div class="payment-info">
+                <h3>Informations acheteur</h3>
+                <form id="payment-form">
+                    <input type="text" id="buyer-name" placeholder="Nom complet" required>
+                    <input type="email" id="buyer-email" placeholder="Email" required>
+                    <input type="tel" id="buyer-phone" placeholder="Téléphone">
+                    <button type="submit" class="btn-primary">Générer l'adresse de paiement</button>
+                </form>
+                
+                <div id="payment-details"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html>
