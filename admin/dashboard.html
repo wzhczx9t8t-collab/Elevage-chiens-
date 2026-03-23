@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Éleveur</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>🐕 Élevage Canin</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../catalog.html">Nos chiots</a></li>
+                <li><a href="dashboard.html" class="active">Espace éleveur</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-dashboard">
+        <div class="admin-header">
+            <h2>📋 Gestion des chiots</h2>
+            <button class="add-puppy-btn" id="open-add-modal">+ Ajouter un chiot</button>
+        </div>
+
+        <div class="admin-table">
+            <table style="width:100%; border-collapse:collapse;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Photo</th>
+                        <th>Nom</th>
+                        <th>Race</th>
+                        <th>Âge</th>
+                        <th>Prix</th>
+                        <th>Dispo</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="puppies-table-body">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="puppy-modal" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">Ajouter un chiot</h3>
+            <form id="puppy-form">
+                <input type="hidden" id="puppy-id">
+                <input type="text" id="puppy-name" placeholder="Nom du chiot" required>
+                <input type="text" id="puppy-breed" placeholder="Race" required>
+                <select id="puppy-gender" required>
+                    <option value="">Sexe</option>
+                    <option value="Mâle">Mâle</option>
+                    <option value="Femelle">Femelle</option>
+                </select>
+                <input type="text" id="puppy-age" placeholder="Âge" required>
+                <input type="number" id="puppy-price" placeholder="Prix (€)" required>
+                <input type="text" id="puppy-image" placeholder="URL de l'image" required>
+                <textarea id="puppy-description" rows="3" placeholder="Description"></textarea>
+                <input type="text" id="puppy-vaccines" placeholder="Vaccins">
+                <select id="puppy-available">
+                    <option value="true">Disponible</option>
+                    <option value="false">Vendu</option>
+                </select>
+                <div class="modal-buttons">
+                    <button type="button" id="close-modal" class="btn-secondary">Annuler</button>
+                    <button type="submit" class="btn-primary">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
