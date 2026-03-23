@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du chiot - Élevage Canin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>🐕 Élevage Canin</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="catalog.html">Nos chiots</a></li>
+                <li><a href="admin/dashboard.html">Espace éleveur</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-section">
+        <div class="product-container">
+            <div class="product-image">
+                <img id="puppy-image" src="" alt="Chiot">
+            </div>
+            <div class="product-info">
+                <h2 id="puppy-name"></h2>
+                <p class="product-breed" id="puppy-breed"></p>
+                <div class="product-details">
+                    <p><strong>Âge :</strong> <span id="puppy-age"></span></p>
+                    <p><strong>Sexe :</strong> <span id="puppy-gender"></span></p>
+                    <p><strong>Prix :</strong> <span class="product-price" id="puppy-price"></span></p>
+                </div>
+                <div class="product-description">
+                    <h3>Description</h3>
+                    <p id="puppy-description"></p>
+                </div>
+                <div class="product-vaccines">
+                    <h3>Suivi vétérinaire</h3>
+                    <p id="puppy-vaccines"></p>
+                </div>
+                <a id="reserve-btn" class="btn-primary">💰 Réserver en cryptomonnaie</a>
+                <p class="crypto-note">Paiement accepté : Bitcoin, Ethereum, USDT</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
